@@ -1,17 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "api/webhook.php": {
-      "runtime": "@vercel/php@0.6.0"
+  "builds": [
+    {
+      "src": "api/webhook.php",
+      "use": "@vercel/php"          // ← no version tag → Vercel pulls the latest
     }
-  },
+  ],
   "routes": [
     {
       "src": "/(.*)",
       "dest": "/api/webhook.php"
     }
-  ],
-  "env": {
-    "BOT_TOKEN": "8244642809:AAEVNJHStwfK1r5ir0pD_op-SS5SyDCaSwQ"
-  }
+  ]
 }
