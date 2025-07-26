@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "@vercel/php": "0.6.0"
+    "@vercel/php": "^1.4.0"        // any 1.x version is fine; ^1.4.0 fetches the latest 1.x
   }
 }
