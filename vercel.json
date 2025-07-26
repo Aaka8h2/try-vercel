@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/webhook.php",
-      "use": "@vercel/php"          // ← no version tag → Vercel pulls the latest
+  "functions": {
+    "api/webhook.php": {
+      "runtime": "@vercel/php@0.7.0"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/webhook.php"
-    }
-  ]
+  }
 }
